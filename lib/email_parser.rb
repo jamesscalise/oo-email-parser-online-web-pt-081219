@@ -12,9 +12,12 @@ class EmailAddressParser
   
   def parse
     array = @emails.split(", ")
-    array.map{|string|
-      string.split(" ")}
-    array
+    newArray = []
+    array.each{|string|
+      string = string.split(" ")
+      newArray << string
+    }
+    newArray.flatten
   end
 
 end
