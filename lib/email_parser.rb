@@ -17,7 +17,7 @@ class EmailAddressParser
       string = string.split(" ")
       newArray << string
     }
-    newArray.flatten
+    newArray.flatten.uniq
   end
 
 end
