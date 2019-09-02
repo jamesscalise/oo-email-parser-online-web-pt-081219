@@ -11,9 +11,10 @@ class EmailAddressParser
   end
   
   def parse
-    @emails = @emails.split(", ")
-     # @emails = @emails.split(" ")
-    @emails
+    array = @emails.split(", ")
+    array.map{|string|
+      string.split(" ")}
+    array
   end
 
 end
